@@ -33,7 +33,7 @@ class Add extends \Magento\Checkout\Controller\Cart\Add
 
         try {
             if (isset($params['qty'])) {
-                $filter = new \Zend_Filter_LocalizedToNormalized(
+                $filter = new \Laminas\I18n\Filter\NumberFormat(
                     ['locale' => $this->_objectManager->get(
                         \Magento\Framework\Locale\ResolverInterface::class
                     )->getLocale()]
